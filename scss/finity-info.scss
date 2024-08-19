@@ -23,12 +23,12 @@
 .items-finity-info {
   display: flex;
   gap: 40px;
+  overflow-x: auto;
   &::-webkit-scrollbar {
     display: none;
   }
   @media (max-width: $tablet) {
     justify-content: left;
-    overflow-x: auto;
   }
   @media (max-width: $mobile) {
     margin-left: 17px;
