@@ -1,0 +1,109 @@
+.tokenomic {
+  margin-top: 13px;
+  padding-bottom: 50px;
+  order: 4;
+
+  @media (max-width: $tablet) {
+    margin-top: 70px;
+  }
+  @media (max-width: $mobile) {
+    margin-top: 50px;
+  }
+
+  &__container {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      top: -9%;
+      left: -25%;
+      width: 567px;
+      height: 722px;
+      background: url('../img/tokenomic/bg.svg') 0 0 no-repeat;
+      background-size: cover;
+      filter: blur(170px);
+    }
+    @media (max-width: $mobile) {
+      &::after {
+        filter: blur(33px);
+        width: 153px;
+        height: 248px;
+        background: url('../img/tokenomic/bg-mobile.svg') 0 0 no-repeat;
+        top: -9%;
+        left: 0%;
+      }
+    }
+    @media (max-width: $mobileSmall) {
+      &::after {
+        left: -25%;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1087px;
+    margin: 0 auto;
+    @media (max-width: $tablet) {
+      max-width: 90%;
+    }
+    @media (max-width: $mobile) {
+      gap: 5px;
+    }
+  }
+
+  &__title {
+    font-family: Montserrat;
+    font-size: clamp(30px, 5vw, 69px);
+    font-weight: 600;
+    line-height: 1.22;
+
+    & span {
+      background: linear-gradient(
+        117.47deg,
+        #86affe 7.39%,
+        #a57aff 23.36%,
+        #fb84ff 38.85%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__text {
+    margin-top: 10px;
+    font-family: Montserrat;
+    font-size: clamp(12px, 1.3vw, 25px);
+    font-weight: 500;
+    line-height: 1.55;
+    text-align: center;
+
+    @media (max-width: $mobile) {
+      margin-top: 6px;
+      text-align: center;
+    }
+  }
+
+  &__image-wrapper {
+    margin-top: 57px;
+    @media (max-width: $fullPc) {
+      margin-top: 20px;
+    }
+    @media (max-width: $mobile) {
+      height: clamp(240px, 60vw, 700px);
+      margin-top: 32px;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    object-fit: cover;
+    max-height: clamp(240px, 89vh, 826px);
+    @media (max-width: $fullPc) {
+      max-height: clamp(240px, 60vh, 700px);
+    }
+  }
+}

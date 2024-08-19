@@ -1,0 +1,232 @@
+@import 'variables';
+
+.main {
+  order: 2;
+  margin-top: 114px;
+  padding-top: 90px;
+  margin-bottom: 50px;
+
+  @media (max-width: $fullPc) {
+    margin-top: 84px;
+  }
+  @media (max-width: $tablet) {
+    margin-top: 76px;
+    padding-top: 22px;
+  }
+  @media (max-width: $mobile) {
+    margin-bottom: 14px;
+    padding-top: 33px;
+  }
+
+  &__items {
+    display: flex;
+    gap: 20px;
+    @media (max-width: $fullPc) {
+      align-items: center;
+    }
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+    @media (max-width: $mobileSmall) {
+      gap: 36px;
+    }
+  }
+
+  &__item {
+    &_m {
+      flex: 1 1 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      @media (max-width: $tablet) {
+        order: 2;
+        gap: 11px;
+      }
+    }
+
+    &_i {
+      flex: 0 1 645px;
+      margin-top: 28px;
+      max-height: 594px;
+      @media (max-width: $fullPc) {
+        margin-top: 0;
+        height: clamp(256px, 50vh, 592px);
+      }
+      @media (max-width: $tablet) {
+        width: clamp(250px, 37vw, 800px);
+        height: clamp(228px, 37vw, 575px);
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: center;
+      }
+      @media (max-width: $mobileSmall) {
+        width: clamp(250px, 61vw, 800px);
+        height: clamp(228px, 61vw, 575px);
+      }
+    }
+  }
+
+  &__title {
+    @include main-title;
+    background: $mainGradiant;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 58.51px;
+    @media (max-width: $fullPc) {
+      font-size: 35px;
+      line-height: 40px;
+    }
+    @media (max-width: $tablet) {
+      font-family: Montserrat;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 26.82px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-family: Montserrat;
+    font-size: 37px;
+    font-weight: 400;
+    line-height: 45.1px;
+    color: rgba(149, 149, 149, 1);
+    margin-top: 5px;
+
+    @media (max-width: $fullPc) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+    @media (max-width: $tablet) {
+      font-family: Montserrat;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24.38px;
+      text-align: center;
+    }
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+  }
+}
+
+.actions-main {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  @media (max-width: $tablet) {
+    justify-content: center;
+  }
+  @media (max-width: $mobile) {
+    margin-top: 9px;
+    gap: 23px;
+  }
+
+  &__contact-button {
+    text-align: center;
+    width: 195px;
+    border-radius: 47px;
+    transition: all ease 0.3s;
+    position: relative;
+    z-index: 1;
+    padding: 16px;
+    border: 2px solid white;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26.82px;
+
+    @media (max-width: $mobile) {
+      font-family: Montserrat;
+      font-size: 19.76px;
+      font-weight: 600;
+      line-height: 24.09px;
+      width: 150px;
+    }
+
+    &::after {
+      transition: all 0.3s ease;
+      content: '';
+      position: absolute;
+      width: 0;
+      background: $mainGradiant;
+      height: 0%;
+      left: 50%;
+      top: 50%;
+      border-radius: 47px;
+      z-index: -1;
+    }
+
+    &:hover {
+      &::after {
+        transition: all 0.3s ease;
+        background: $mainGradiant;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  &__buy-button {
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26.82px;
+    width: 210px;
+    border-radius: 47px;
+    position: relative;
+    z-index: 1;
+    padding: 19px 16px 15px;
+    text-align: center;
+
+    @media (max-width: $mobile) {
+      font-family: Montserrat;
+      font-size: 19.76px;
+      font-weight: 600;
+      line-height: 24.09px;
+      width: 150px;
+    }
+
+    &::after {
+      transition: all 0.3s ease;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0%;
+      top: 0%;
+      z-index: -1;
+      background: $mainGradiant;
+      border-radius: 47px;
+    }
+    &:hover {
+      &::after {
+        transition: all 0.3s ease;
+        left: 50%;
+        width: 0%;
+        height: 0%;
+        top: 50%;
+      }
+      border: none;
+    }
+  }
+}

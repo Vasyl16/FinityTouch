@@ -1,0 +1,332 @@
+@import 'variables';
+
+.fund-map {
+  order: 6;
+  margin-top: 5px;
+  margin-bottom: 80px;
+
+  @media (max-width: $tablet) {
+    margin-top: 25px;
+    margin-bottom: 50px;
+  }
+  @media (max-width: $mobile) {
+    margin-top: 42px;
+    margin-bottom: 27px;
+  }
+
+  &__body {
+    background: url('../img/fund-map/bg.svg') 22% 51.5% no-repeat;
+    @media (max-width: $fullPc) {
+      background: none;
+    }
+  }
+}
+
+.items-fund-map {
+  min-height: 701px;
+  display: flex;
+  gap: 99px;
+  align-items: center;
+  margin-left: 43px;
+
+  @media (max-width: $fullPc) {
+    min-height: auto;
+    align-items: stretch;
+    gap: 0;
+    row-gap: 61px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+
+    &_m {
+      right: -129px;
+    }
+
+    @media (max-width: $fullPc) {
+      justify-content: center;
+      flex-direction: row;
+      right: 0;
+      flex-wrap: wrap;
+    }
+    @media (max-width: $mobileSmall) {
+      gap: 9px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    max-width: 245px;
+    position: relative;
+    display: flex;
+
+    &_a {
+      top: 148px;
+    }
+
+    &_b {
+      top: -46px;
+    }
+
+    &_c {
+      top: 161px;
+      right: -129px;
+    }
+
+    &_d {
+      top: -179px;
+    }
+
+    &_e {
+      top: 169px;
+    }
+
+    @media (max-width: $fullPc) {
+      top: 0;
+      right: 0;
+      left: 0;
+      margin-right: 60px;
+      flex: 0 0 245px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        clip-path: polygon(0 0, 0% 100%, 100% 50%);
+        width: 24px;
+        height: 47px;
+        right: -40px;
+        top: 50%;
+        transform: translate(0%, -50%);
+        background: $secondGradiant;
+      }
+      &:last-child {
+        &::after {
+          content: none;
+        }
+      }
+      &_m {
+        margin-right: 0;
+        &::after {
+          content: none;
+        }
+      }
+    }
+
+    @media (max-width: $tablet) {
+      &_c {
+        flex: 1 1 100%;
+        max-width: none;
+        justify-content: center;
+        margin-right: 0;
+        &::after {
+          top: auto;
+          bottom: -50px;
+          right: 50%;
+          transform: rotate(90deg) translate(0%, -25%);
+        }
+      }
+    }
+
+    @media (max-width: $mobile) {
+      flex: none;
+      margin-right: 0;
+
+      &::after {
+        top: auto;
+        bottom: -40px;
+        right: 50%;
+        transform: rotate(90deg) translate(0%, -25%);
+      }
+    }
+  }
+
+  &__body {
+    max-width: 245px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    padding: 2px;
+    background: $mainBgColor;
+    padding: 29px 6px 13px 10px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      box-shadow: 2px 2px 9px 0px rgba(0, 157, 44, 1);
+      background: $secondGradiant;
+      border-radius: 25px;
+      z-index: -1;
+    }
+
+    &_b {
+      &::after {
+        background: linear-gradient(45deg, #b2ff0f 10.47%, #76ffef 88.29%);
+      }
+    }
+
+    &_d {
+      &::after {
+        background: linear-gradient(64deg, #b2ff0f 10.47%, #76ffef 88.29%);
+      }
+    }
+
+    &_m {
+      background: none;
+      color: $mainBgColor;
+    }
+
+    @media (max-width: $mobile) {
+      border-radius: 20px;
+      padding: 18px 6px 12px 15px;
+      &::after {
+        border-radius: 20px;
+      }
+    }
+  }
+
+  &__arrow-icon {
+    position: absolute;
+    height: 12px;
+    background: $mainBgColor;
+    width: 25px;
+    top: -11px;
+    left: 35px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+
+    @media (max-width: $fullPc) {
+      display: none;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: -11px;
+      left: 0;
+      width: 28px;
+      height: 28px;
+      background: url('../img/fund-map/fund-arrow.svg') 0 0 no-repeat;
+      background-size: contain;
+      transform: translate(-5%, 1%);
+    }
+
+    &_b {
+      left: 110px;
+      top: auto;
+      bottom: -11px;
+      transform: rotate(180deg);
+    }
+
+    &_c {
+      left: 107px;
+    }
+
+    &_e {
+      background: none;
+      &::after {
+        top: -24px;
+        left: -7px;
+        width: 51px;
+        height: 53px;
+        background: url('../img/fund-map/fund-arrow-2.svg') 0 0 no-repeat;
+      }
+    }
+
+    &_d {
+      background: none;
+      top: auto;
+      bottom: -11px;
+      transform: rotate(180deg);
+      &::after {
+        top: -24px;
+        left: -7px;
+        width: 51px;
+        height: 53px;
+        background: url('../img/fund-map/fund-arrow-2.svg') 0 0 no-repeat;
+      }
+    }
+  }
+
+  &__arrow-shadow {
+    &::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      transform: rotate(45deg);
+      height: 18px;
+      top: -5px;
+      left: 5px;
+      box-shadow: -1px -2px 9px 1px #009d2c;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      transform: rotate(-45deg);
+      height: 19px;
+      top: -6px;
+      left: 18px;
+      box-shadow: 0px -1px 9px 1px #009d2c;
+    }
+
+    &_e {
+      &::after {
+        height: 23px;
+        top: -10px;
+        left: 8px;
+      }
+
+      &::before {
+        height: 23px;
+        top: -10px;
+        left: 22px;
+      }
+    }
+    &_d {
+      &::after {
+        height: 23px;
+        top: -10px;
+        left: 8px;
+      }
+
+      &::before {
+        height: 23px;
+        top: -10px;
+        left: 22px;
+      }
+    }
+  }
+
+  &__title {
+    font-family: Chakra Petch;
+    font-size: clamp(25px, 3vw, 33px);
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  &__text {
+    margin-top: 26px;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-size: clamp(13px, 1.5vw, 18px);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    text-align: left;
+    min-height: 49px;
+  }
+}

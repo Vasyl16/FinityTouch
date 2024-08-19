@@ -1,0 +1,79 @@
+$minWidth: 320px;
+// Ширина полотна (макету)
+// $maxWidth: 0;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1520px;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 15px;
+
+// Ширина спрацьовування першого брейкпоінту
+
+$pc: $maxWidthContainer;
+$fullPc: $pc + $containerPadding + $containerPadding;
+// ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$tablet: 1024px; // Планшети, деякі телефони в горизонтальному положенні
+$mobile: 767.98px; // Телефони L
+$mobileSmall: 479.98px; // Телефони S
+$moblieSuperSmall: 374.98px;
+
+$fontFamily: 'Chakra Petch'; // main font family
+$fontSize: 25px; // main font size
+
+// Основні кольори
+$mainColor: white; // Колір шрифту за замовчуванням
+// $mainHoverColor: white; // Колір шрифту за замовчуванням
+$secondColor: #959595; // Колір шрифту за замовчуванням
+$mainBgColor: #0d0d0d;
+$mainGradiant: linear-gradient(
+  103.59deg,
+  #54d6ff 13.23%,
+  #c275ff 56.28%,
+  #f36aff 91.95%
+);
+$secondGradiant: linear-gradient(148.71deg, #b2ff0f 10.47%, #76ffef 88.29%);
+$thirdGradiant: linear-gradient(144.66deg, #ff6c56 6.96%, #ff9344 88.16%);
+
+@mixin main-title {
+  font-family: 'Chakra Petch';
+  font-size: 147px;
+  font-weight: 600;
+  line-height: 191.1px;
+  @media (max-width: $fullPc) {
+    font-size: 80px;
+    line-height: 100px;
+  }
+
+  @media (max-width: $mobile) {
+    font-family: Chakra Petch;
+    font-size: 55.58px;
+    font-weight: 600;
+    line-height: 72.25px;
+  }
+}
+
+@mixin second-title {
+  font-family: Chakra Petch;
+  font-size: 120px;
+  font-weight: 600;
+  line-height: 135px;
+  @media (max-width: $fullPc) {
+    font-size: 80px;
+    line-height: 100px;
+  }
+  @media (max-width: $mobile) {
+    font-family: Chakra Petch;
+    font-size: 60px;
+    font-weight: 600;
+    // line-height: 100px;
+    line-height: 70px;
+  }
+}
+
+[class*='__container'] {
+  max-width: $pc;
+  padding: 0 $containerPadding;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}

@@ -1,0 +1,586 @@
+@import 'variables';
+
+.road-map {
+  margin-top: 149px;
+  margin-bottom: -8px;
+  order: 5;
+  @media (max-width: $fullPc) {
+    margin-bottom: 70px;
+  }
+  @media (max-width: $tablet) {
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
+  @media (max-width: $mobile) {
+    margin-top: 44px;
+    margin-bottom: 30px;
+  }
+
+  &__container {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      top: -8%;
+      right: -18%;
+      background: url('../img/road-map/bg-1.svg') 0 0 no-repeat;
+      background-size: contain;
+      width: 567px;
+      height: 722px;
+      filter: blur(225px);
+    }
+    @media (max-width: $mobile) {
+      &::after {
+        filter: blur(43px);
+        width: 121px;
+        height: 153px;
+        top: -7.4%;
+        right: -3%;
+      }
+      &::before {
+        position: absolute;
+        content: '';
+        background: url('../img/road-map/bg-2.svg') 0 0 no-repeat;
+        background-size: contain;
+        filter: blur(42px);
+        right: -5%;
+        bottom: -3.3%;
+        width: 178px;
+        height: 357px;
+      }
+    }
+  }
+
+  &__title {
+    font-family: Chakra Petch;
+    font-size: clamp(30px, 5vw, 61px);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.11em;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 38.75px;
+    text-align: center;
+    max-width: 1113px;
+    margin: 32px auto 0;
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__graph {
+    margin-top: 101px;
+    @media (max-width: $mobile) {
+      margin-top: 43px;
+    }
+  }
+}
+
+.graph-road-map {
+  background: url('../img/road-map/road-image.svg') 50% 56px no-repeat;
+  @media (max-width: $fullPc) {
+    background: url('../img/road-map-mobile/road-image.svg') 50% 56px no-repeat;
+  }
+}
+
+.items-graph-road-map {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    top: 11.7%;
+    left: -28.5%;
+    background: url('../img/road-map/bg-2.svg') 0 0 no-repeat;
+    background-size: contain;
+    width: 594px;
+    height: 1191px;
+    filter: blur(225px);
+  }
+  &::before {
+    position: absolute;
+    content: '';
+    right: -19%;
+    bottom: 4.4%;
+    background: url('../img/road-map/bg-3.svg') 0 0 no-repeat;
+    background-size: contain;
+    width: 567px;
+    height: 722px;
+    filter: blur(225px);
+  }
+
+  @media (max-width: $mobile) {
+    &::after {
+      filter: blur(42px);
+      left: auto;
+      right: -20%;
+      top: 6%;
+      width: 178px;
+      height: 357px;
+    }
+    &::before {
+      background: url('../img/road-map/bg-2.svg') 0 0 no-repeat;
+      background-size: contain;
+      filter: blur(42px);
+      left: auto;
+      right: 3%;
+      top: 46.7%;
+      width: 178px;
+      height: 357px;
+    }
+  }
+  @media (max-width: $fullPc) {
+    align-items: center;
+    row-gap: 40px;
+  }
+
+  &__item {
+    flex: 1 1 auto;
+    border-radius: 15px;
+    display: flex;
+    gap: 49px;
+    justify-content: flex-end;
+    position: relative;
+    @media (max-width: $fullPc) {
+      padding-left: 30px;
+      gap: 80px;
+      @media (max-width: $mobile) {
+        gap: 33px;
+        padding-left: 17px;
+      }
+    }
+    &_l {
+      @media (min-width: $fullPc) {
+        justify-content: flex-start;
+      }
+    }
+    @media (max-width: $fullPc) {
+      top: 0 !important;
+    }
+
+    &_m1 {
+      top: -28px;
+    }
+
+    &_m2 {
+      top: -82px;
+    }
+
+    &_m3 {
+      top: -110px;
+    }
+
+    &_m4 {
+      top: -140px;
+    }
+
+    &_m5 {
+      top: -136px;
+    }
+  }
+
+  &__step {
+    order: 2;
+    cursor: pointer;
+    margin-top: 55px;
+    padding-top: 10px;
+    position: relative;
+    padding-right: 80px;
+    @media (max-width: $fullPc) {
+      padding-left: 0;
+      padding-right: 0;
+      position: relative;
+      white-space: nowrap;
+      @media (max-width: $mobile) {
+        margin-top: 13px;
+        padding-right: 0;
+      }
+    }
+    &::after {
+      cursor: pointer;
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: 0px;
+      width: 0px;
+      height: 0;
+      border-radius: 50%;
+      background: linear-gradient(103.59deg, #fc84ff 13.23%, #54d1fa 91.95%);
+      transition: all ease 0.3s;
+      @media (max-width: $mobile) {
+        top: 21px;
+      }
+    }
+    &:hover {
+      &::after {
+        top: 1px;
+        left: -25.5px;
+        width: 57px;
+        height: 57px;
+        @media (max-width: $mobile) {
+          width: 43px;
+          height: 43px;
+          left: -18px;
+        }
+      }
+    }
+    &_a {
+      &::after {
+        height: 57px;
+        width: 57px;
+        top: 1px;
+        left: -25.5px;
+        @media (max-width: $mobile) {
+          width: 43px;
+          height: 43px;
+          left: -18px;
+        }
+      }
+    }
+
+    @media (min-width: $fullPc) {
+      &::after {
+        cursor: pointer;
+        content: '';
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        left: auto;
+        width: 0px;
+        height: 0;
+        border-radius: 50%;
+        background: linear-gradient(103.59deg, #fc84ff 13.23%, #54d1fa 91.95%);
+        transition: all ease 0.3s;
+      }
+      &:hover {
+        &::after {
+          top: 1px;
+          left: -25.5px;
+          width: 57px;
+          height: 57px;
+          right: 0;
+          left: auto;
+        }
+      }
+      &_a {
+        &::after {
+          height: 57px;
+          width: 57px;
+          top: 0px;
+          right: 0;
+          left: auto;
+        }
+      }
+      &_la {
+        &::after {
+          height: 57px;
+          width: 57px;
+          left: 0 !important;
+          top: 0;
+          right: auto;
+        }
+      }
+
+      &_l {
+        @media (min-width: $fullPc) {
+          padding-left: 80px;
+          padding-right: 0;
+          cursor: pointer;
+          &:after {
+            left: 28px;
+            right: auto;
+          }
+          &:hover {
+            &::after {
+              left: 0;
+              right: auto;
+            }
+          }
+        }
+      }
+      &_m {
+        padding-left: 192px;
+      }
+    }
+
+    & &-icon {
+      @media (min-width: $fullPc) {
+        display: none;
+      }
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      &::before {
+        top: 55px;
+        left: 0;
+        position: absolute;
+        content: '';
+        width: 6px;
+        height: calc(100% - 57px + 100px);
+        background: linear-gradient(103.59deg, #fc84ff 13.23%, #54d1fa 91.95%);
+        @media (max-width: $mobile) {
+          top: 43px;
+          height: calc(100% - 57px + 72px);
+        }
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: -25.5px;
+        width: 57px;
+        height: 57px;
+        background: url('../img/road-map/road-circle.svg') 0 0 no-repeat;
+        background-size: cover;
+        @media (max-width: $mobile) {
+          width: 43px;
+          height: 43px;
+          left: -18px;
+        }
+      }
+      &_b {
+        &::before {
+          content: none;
+        }
+      }
+    }
+
+    &_last &-text {
+      @media (max-width: $fullPc) {
+        transform: none;
+        transform: rotate(-90deg);
+        top: 19px;
+        left: -11px;
+      }
+      @media (max-width: $tablet) {
+        top: 20px;
+        left: -3px;
+      }
+    }
+  }
+
+  &__step-text {
+    text-transform: uppercase;
+    font-family: Chakra Petch;
+    font-size: clamp(14px, 2.5vw, 30px);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.11em;
+    @media (max-width: $fullPc) {
+      writing-mode: vertical-lr;
+      text-orientation: sideways;
+      transform: rotate(180deg);
+      position: relative;
+      top: 57px;
+      right: -20px;
+    }
+    @media (max-width: $mobile) {
+      left: auto;
+      top: 40px;
+      right: -10px;
+    }
+  }
+
+  &__content {
+    width: 613px;
+    width: clamp(264px, 65vw, 613px);
+    border-radius: 25px;
+    padding-top: 13px;
+    background: $mainBgColor;
+    position: relative;
+    padding-bottom: 10px;
+    order: 3;
+    @media (max-width: $mobile) {
+      padding-top: 8px;
+      border-radius: 15px;
+      padding-bottom: 2px;
+    }
+    &::after {
+      border-radius: 25px;
+      content: '';
+      position: absolute;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      top: -2px;
+      left: -2px;
+      background: linear-gradient(143.85deg, #ffb78f 11.79%, #db73ff 85.69%);
+      z-index: -1;
+      box-shadow: 2px 2px 9px 0px rgba(145, 0, 157, 1);
+      @media (max-width: $mobile) {
+        border-radius: 15px;
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        top: -1px;
+        left: -1px;
+      }
+    }
+    &_l {
+      @media (min-width: $fullPc) {
+        order: 1;
+        &::after {
+          background: linear-gradient(
+            216.15deg,
+            #ffb78f 11.79%,
+            #db73ff 85.69%
+          );
+        }
+      }
+    }
+  }
+
+  &__arrow-icon {
+    position: absolute;
+    left: 0.5px;
+    top: 49px;
+    transform: translate(-100%, 72%);
+    border-radius: 30px;
+    border-top-right-radius: 3px 2px;
+    border-bottom-right-radius: 3px 2px;
+    background: $mainBgColor;
+    width: 8px;
+    height: 29px;
+    z-index: 2;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -16.5px;
+      width: 31px;
+      height: 31px;
+      background: url('../img/road-map/road-arrow.svg') 0 0 no-repeat;
+      background-size: contain;
+      z-index: 5;
+      @media (max-width: $mobile) {
+        top: 0px;
+        left: -10px;
+        width: 15px;
+        height: 15px;
+        transform: translate(3%, -2%);
+      }
+    }
+
+    @media (max-width: $mobile) {
+      top: 16px;
+      height: 14px;
+      width: 2px;
+    }
+
+    &_l {
+      left: auto;
+      right: -15.5px;
+      transform: translate(-100%, 72%) rotate(180deg);
+      @media (max-width: $fullPc) {
+        transform: translate(-100%, 72%);
+        left: 0.5px;
+        right: auto;
+      }
+    }
+  }
+
+  &__arrow-shadow {
+    &::before {
+      content: '';
+      top: -3px;
+      left: -3px;
+      position: absolute;
+      width: 3px;
+      height: 24px;
+      box-shadow: -5px -3px 9px -0.5px rgba(145, 0, 157, 1);
+      transform: rotate(45deg);
+      z-index: 30;
+      background: none;
+      @media (max-width: $mobile) {
+        top: 0px;
+        left: -4px;
+        height: 11px;
+        width: 2px;
+      }
+    }
+    &::after {
+      content: '';
+      top: 10px;
+      left: -3px;
+      position: absolute;
+      width: 3px;
+      height: 20px;
+      box-shadow: -5px -3px 9px -0.5px rgba(145, 0, 157, 1);
+      transform: rotate(-45deg);
+      z-index: 30;
+      background: none;
+      @media (max-width: $mobile) {
+        top: 5px;
+        left: -3px;
+        height: 11px;
+        width: 2px;
+      }
+    }
+  }
+
+  &__row {
+    padding-left: 43px;
+    padding-right: 5px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid;
+    position: relative;
+    border-image: linear-gradient(143.85deg, #ffb78f 11.79%, #db73ff 85.69%) 1;
+    &_l {
+      @media (min-width: $fullPc) {
+        padding-left: 32px;
+        border-image: linear-gradient(216.15deg, #ffb78f 11.79%, #db73ff 85.69%)
+          1;
+      }
+    }
+    &:last-child {
+      border: none;
+    }
+
+    @media (max-width: $tablet) {
+      padding-left: 20px;
+    }
+    @media (max-width: $mobile) {
+      padding-left: 9px;
+      padding-bottom: 9px;
+    }
+  }
+
+  &__date {
+    text-transform: uppercase;
+    margin-top: 15px;
+    font-family: Chakra Petch;
+    font-size: clamp(15px, 3vw, 37px);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.11em;
+    text-align: left;
+    @media (max-width: $tablet) {
+      margin-top: 10px;
+    }
+
+    @media (max-width: $mobile) {
+      margin-top: 4px;
+    }
+  }
+
+  &__info {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.22;
+    text-align: left;
+    margin-top: 8px;
+    font-size: clamp(11px, 2vw, 24px);
+    @media (max-width: $mobile) {
+      margin-top: 1px;
+    }
+  }
+}

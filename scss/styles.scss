@@ -1,0 +1,39 @@
+// scss/styles.scss
+
+@import 'variables';
+@import 'index';
+@import 'header';
+@import 'main';
+@import 'design';
+@import 'feature';
+@import 'team';
+@import 'labels';
+@import 'questions';
+@import 'follow';
+@import 'contact';
+@import 'footer';
+
+// second page
+@import 'tokenomic-main';
+@import 'finity-info';
+@import 'tokenomic';
+@import 'road-map';
+@import 'token-address';
+@import 'marketplace-main-soon';
+@import 'submit';
+
+// third page
+@import 'fund-map';
+
+.wrapper {
+  overflow: hidden;
+  background-color: $mainBgColor;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: -1;
+  &_b {
+    height: 100svh;
+  }
+}

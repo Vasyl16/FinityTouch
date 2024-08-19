@@ -1,0 +1,243 @@
+.questions {
+  order: 8;
+  margin-top: 71px;
+  margin-bottom: 62px;
+  @media (max-width: $tablet) {
+    margin-bottom: 40px;
+  }
+  @media (max-width: $mobile) {
+    margin-bottom: 20px;
+    margin-top: 55px;
+  }
+
+  &__container {
+    display: flex;
+    gap: 38px;
+    @media (max-width: 1300px) {
+      gap: 30px;
+    }
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (max-width: $tablet) {
+    }
+    @media (max-width: $mobile) {
+    }
+    @media (max-width: $mobileSmall) {
+      gap: 0px;
+    }
+  }
+
+  &__row {
+    flex: 1 1 auto;
+    @media (max-width: $fullPc) {
+      flex: 0 1 50%;
+    }
+    @media (max-width: $tablet) {
+      width: 90%;
+    }
+    @media (max-width: $mobileSmall) {
+      width: 97%;
+    }
+    &_m {
+      display: flex;
+      flex-direction: column;
+      gap: 21px;
+      @media (max-width: $fullPc) {
+        flex: 0 1 50%;
+      }
+      flex: 0 1 46.3%;
+    }
+  }
+
+  &__title {
+    font-family: Chakra Petch;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 78px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    background: linear-gradient(143.85deg, #ffb78f 11.79%, #db73ff 85.69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &-m {
+      background: $secondGradiant;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    @media (max-width: $mobile) {
+      font-family: Chakra Petch;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 39px;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  &__wrapper-image {
+    max-width: 100%;
+    flex: 1 1 auto;
+    margin: 0 auto;
+    width: 100%;
+    @media (max-width: $tablet) {
+      min-height: 300px;
+      max-width: 70%;
+    }
+    @media (max-width: $mobile) {
+      min-height: 220px;
+      max-width: 100%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    @media (max-width: $tablet) {
+      min-height: 300px;
+    }
+    @media (max-width: $mobile) {
+      height: 100%;
+      min-height: 220px;
+    }
+  }
+  &__question {
+  }
+}
+
+.question-questions {
+  @media (max-width: $mobile) {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    margin-top: 14px;
+    @media (max-width: $tablet) {
+      margin-top: 0;
+    }
+    @media (max-width: $mobile) {
+      gap: 23px;
+    }
+    @media (max-width: $mobileSmall) {
+      gap: 13px;
+    }
+  }
+
+  &__item {
+    padding: 30px 10px 10px 9px;
+    position: relative;
+    border-radius: 10px;
+    background: $mainBgColor;
+    box-shadow: 4px 4px 20px 0px rgba(239, 57, 255, 0.3);
+
+    &::after {
+      position: absolute;
+      content: '';
+      background: $mainGradiant;
+      border-radius: 10px;
+      width: calc(100% + 4px);
+      height: calc(100% + 3px);
+      left: -2px;
+      top: -1px;
+      z-index: -1;
+    }
+
+    &_m {
+      box-shadow: 4px 4px 20px 0px rgba(85, 255, 57, 0.5);
+      &::after {
+        background: $secondGradiant;
+      }
+    }
+    @media (max-width: $mobile) {
+      padding: 16px 9px 2px 6px;
+    }
+  }
+
+  &__name {
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34.13px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 25px;
+    margin-right: 18px;
+    position: relative;
+    margin-bottom: 20px;
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 21px;
+      height: 2px;
+      background: linear-gradient(76.59deg, #fc84ff 13.23%, #54d1fa 91.95%);
+      transform: translate(0, -50%);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 21px;
+      height: 2px;
+      background: linear-gradient(76.59deg, #fc84ff 13.23%, #54d1fa 91.95%);
+      transform: translate(0, -50%) rotate(90deg);
+      transition: all ease 0.3s;
+    }
+    &_a {
+      &::before {
+        transform: translate(0, -50%) rotate(180deg);
+      }
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: 10px;
+      padding-left: 5px;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 17.07px;
+      text-align: left;
+      margin-right: 5px;
+      &::before,
+      &::after {
+        width: 18px;
+      }
+    }
+  }
+  &__text {
+    margin-top: 20px;
+    max-width: 752px;
+    font-family: Montserrat;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 34.2px;
+    text-align: left;
+    color: rgba(149, 149, 149, 1);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+
+    &_a {
+      opacity: 1;
+      margin-bottom: 17px;
+    }
+    @media (max-width: $mobile) {
+      font-family: Montserrat;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14.63px;
+      margin-top: 10px;
+      &_a {
+        margin-bottom: 11px;
+        margin-top: 15px;
+      }
+    }
+  }
+}

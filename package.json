@@ -1,0 +1,24 @@
+{
+  "name": "finityTouch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass scss/styles.scss css/styles.css --recursive",
+    "serve": "browser-sync start --server --files 'css/*.css, js/*.js,img/*, *.html'",
+    "watch:sass": "nodemon -e scss -x \"npm run sass\"",
+    "start": "npm-run-all --parallel watch:sass serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.1.4",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "swiper": "^11.1.8"
+  }
+}

@@ -1,0 +1,224 @@
+@import 'variables';
+
+.contact {
+  order: 9;
+  margin-top: 31px;
+  margin-bottom: 5px;
+
+  @media (max-width: $fullPc) {
+    margin-top: 161px;
+    margin-bottom: 100px;
+  }
+  @media (max-width: $tablet) {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  @media (max-width: $mobile) {
+    margin-top: 18px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: $mobileSmall) {
+    margin-top: 48px;
+  }
+
+  &_tokenomic {
+    @media (max-width: $mobileSmall) {
+      margin-top: 14px;
+    }
+  }
+
+  &__container {
+    padding-top: 130px !important;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -88px;
+      width: 460px;
+      height: 494px;
+      background: url('../img/contact/bg-1.png') 0 0 no-repeat;
+      filter: blur(73px);
+      background-size: contain;
+      z-index: -1;
+
+      @media (max-width: 1920px) {
+        left: 0;
+      }
+      @media (max-width: $fullPc) {
+        content: none;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 44px;
+      left: -122px;
+      width: 519px;
+      height: 508px;
+      background: url('../img/contact/bg-image-1.png') 0 0 no-repeat;
+      background-size: contain;
+
+      @media (max-width: 1920px) {
+        left: 0;
+      }
+      @media (max-width: $fullPc) {
+        content: none;
+      }
+    }
+
+    @media (max-width: $fullPc) {
+      padding-top: 0px !important;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding-bottom: 95px;
+
+    @media (max-width: $fullPc) {
+      padding-bottom: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: -140px;
+      width: 429px;
+      height: 460px;
+      background: url('../img/contact/bg-2.png') 0 0 no-repeat;
+      background-size: contain;
+      z-index: -1;
+      filter: blur(73px);
+
+      @media (max-width: 1920px) {
+        right: 0;
+      }
+      @media (max-width: $fullPc) {
+        content: none;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 131px;
+      right: -50px;
+      width: 245px;
+      height: 220px;
+      background: url('../img/contact/bg-image-2.png') 0 0 no-repeat;
+      background-size: contain;
+
+      @media (max-width: 1920px) {
+        right: 85px;
+      }
+      @media (max-width: $fullPc) {
+        content: none;
+      }
+    }
+  }
+
+  &__title {
+    font-family: Montserrat;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60.95px;
+    text-align: center;
+
+    @media (max-width: $mobile) {
+      font-family: Montserrat;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 25.6px;
+    }
+  }
+
+  &__form {
+    margin: 20px auto 0;
+
+    @media (max-width: $mobile) {
+      margin: 31px auto 0;
+    }
+  }
+
+  &__button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 63px;
+
+    @media (max-width: $mobile) {
+      margin-top: 0px;
+    }
+  }
+
+  &__button {
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34.13px;
+    border-bottom-left-radius: 62px;
+    border-top-right-radius: 62px;
+    min-width: 216px;
+    display: inline-block;
+    padding: 17px 25px 14px;
+    text-align: center;
+    background-color: $mainBgColor;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      content: '';
+      background: linear-gradient(103.59deg, #fc84ff 13.23%, #54d1fa 91.95%);
+      border-bottom-left-radius: 62px;
+      border-top-right-radius: 62px;
+      z-index: -1;
+    }
+
+    @media (max-width: $mobile) {
+      font-family: Montserrat;
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 23.16px;
+      min-width: 129px;
+      padding: 8px 20px 8px;
+    }
+  }
+}
+
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  max-width: 612px;
+
+  @media (max-width: $mobile) {
+    max-width: 87%;
+    gap: 32px;
+  }
+
+  &__input {
+    font-family: Montserrat;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34.13px;
+    text-align: left;
+    padding: 41px 10px 17px;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(103.59deg, #fc84ff 13.23%, #54d1fa 91.95%) 1;
+
+    @media (max-width: $mobile) {
+      font-family: Montserrat;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 15.85px;
+      border-bottom: 2px solid;
+      padding: 10px 5px 5px 10px;
+    }
+  }
+}
