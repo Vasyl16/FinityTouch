@@ -16,7 +16,12 @@
     margin-top: 12px;
   }
 
-  &__items {
+  &__container {
+    padding-right: 0px !important;
+
+    @media (min-width: $fullPc) {
+      padding: 0px !important;
+    }
   }
 }
 
@@ -45,6 +50,12 @@
     &_m {
       background: $secondGradiant;
       box-shadow: 2px 2px 9px 0px rgba(22, 157, 0, 1);
+    }
+
+    @media (max-width: $fullPc) {
+      &:last-child {
+        margin-right: 15px;
+      }
     }
     @media (max-width: $tablet) {
       flex: 0 0 400px;

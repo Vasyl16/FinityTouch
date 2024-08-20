@@ -461,18 +461,20 @@
       background-size: contain;
       z-index: 5;
       @media (max-width: $mobile) {
-        top: 0px;
-        left: -10px;
+        transform: translate(3%, 0);
+        top: -1px;
+        left: -6px;
         width: 15px;
         height: 15px;
-        transform: translate(3%, -2%);
       }
     }
 
     @media (max-width: $mobile) {
-      top: 16px;
-      height: 14px;
-      width: 2px;
+      top: 26px;
+      height: 13px;
+      width: 7px;
+      left: -6px;
+      transform: translate(0%, 0%);
     }
 
     &_l {
@@ -483,6 +485,13 @@
         transform: translate(-100%, 72%);
         left: 0.5px;
         right: auto;
+      }
+      @media (max-width: $mobile) {
+        top: 26px;
+        height: 13px;
+        width: 7px;
+        left: -6px;
+        transform: translate(0);
       }
     }
   }
@@ -500,8 +509,8 @@
       z-index: 30;
       background: none;
       @media (max-width: $mobile) {
-        top: 0px;
-        left: -4px;
+        top: -3px;
+        left: 2px;
         height: 11px;
         width: 2px;
       }
@@ -518,8 +527,8 @@
       z-index: 30;
       background: none;
       @media (max-width: $mobile) {
-        top: 5px;
-        left: -3px;
+        top: 4px;
+        left: 1px;
         height: 11px;
         width: 2px;
       }
