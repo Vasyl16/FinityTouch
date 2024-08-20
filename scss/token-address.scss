@@ -6,9 +6,8 @@
   order: 10;
   position: relative;
   @media (max-width: $tablet) {
-    // display: none;
+    display: none;
   }
-
   &__body {
     display: flex;
     flex-direction: column;
@@ -41,7 +40,6 @@
     line-height: 23.16px;
     margin: 0 auto;
   }
-
   &__copy {
     margin-top: 46px;
   }
@@ -50,7 +48,6 @@
 .copy-token-address {
   min-width: 863px;
   display: inline-block;
-
   &__content {
     display: flex;
     margin: 0 auto;
@@ -58,7 +55,6 @@
     padding: 10px 10px 10px 31px;
     border: 2px solid white;
     border-radius: 44px;
-    flex-direction: column;
   }
 
   &__copy-text {

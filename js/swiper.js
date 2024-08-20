@@ -13,6 +13,8 @@ function initializeSwiperTeam() {
         prevEl: '.swiper-team-button-prev',
       },
       slidesPerView: 2,
+      slidesPerGroup: 2,
+      speed: 1000,
       spaceBetween: 10,
       breakpoints: {
         0: {

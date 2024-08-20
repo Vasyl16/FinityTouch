@@ -17,10 +17,8 @@
   }
 
   &__container {
-    padding-right: 0px !important;
-
-    @media (min-width: $fullPc) {
-      padding: 0px !important;
+    @media (max-width: $fullPc) {
+      padding: 0 !important;
     }
   }
 }
@@ -32,11 +30,17 @@
   &::-webkit-scrollbar {
     display: none;
   }
+
+  @media (max-width: $fullPc) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   @media (max-width: $tablet) {
     justify-content: left;
   }
   @media (max-width: $mobile) {
-    margin-left: 17px;
+    padding-left: 32px;
+    gap: 32px;
   }
 
   &__item {
@@ -50,12 +54,6 @@
     &_m {
       background: $secondGradiant;
       box-shadow: 2px 2px 9px 0px rgba(22, 157, 0, 1);
-    }
-
-    @media (max-width: $fullPc) {
-      &:last-child {
-        margin-right: 15px;
-      }
     }
     @media (max-width: $tablet) {
       flex: 0 0 400px;

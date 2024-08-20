@@ -608,7 +608,7 @@ svg path {
       padding-top: 21px; } }
   @media (max-width: 1550px) {
     .design__container {
-      padding-right: 0 !important; } }
+      padding: 0 !important; } }
   .design__title {
     font-family: Chakra Petch;
     font-size: 60px;
@@ -632,14 +632,14 @@ svg path {
   @media (max-width: 767.98px) {
     .body-design {
       margin-top: 28px; } }
-  @media (max-width: 479.98px) {
-    .body-design {
-      margin-left: 37px; } }
   .body-design__items {
     display: flex;
     gap: 40px;
-    overflow-x: auto;
-    padding-right: 20px; }
+    overflow-x: auto; }
+    @media (max-width: 1550px) {
+      .body-design__items {
+        padding-left: 15px;
+        padding-right: 15px; } }
     .body-design__items::-webkit-scrollbar {
       display: none; }
     @media (max-width: 1024px) {
@@ -648,6 +648,9 @@ svg path {
     @media (max-width: 767.98px) {
       .body-design__items {
         gap: 49px; } }
+    @media (max-width: 479.98px) {
+      .body-design__items {
+        padding-left: 52px; } }
   .body-design__item {
     flex: 0 0 346px;
     min-height: 344px;
@@ -2492,11 +2495,9 @@ svg path {
     .finity-info {
       padding-bottom: 19px;
       margin-top: 12px; } }
-  .finity-info__container {
-    padding-right: 0px !important; }
-    @media (min-width: 1550px) {
-      .finity-info__container {
-        padding: 0px !important; } }
+  @media (max-width: 1550px) {
+    .finity-info__container {
+      padding: 0 !important; } }
 
 .items-finity-info {
   display: flex;
@@ -2504,12 +2505,17 @@ svg path {
   overflow-x: auto; }
   .items-finity-info::-webkit-scrollbar {
     display: none; }
+  @media (max-width: 1550px) {
+    .items-finity-info {
+      padding-left: 15px;
+      padding-right: 15px; } }
   @media (max-width: 1024px) {
     .items-finity-info {
       justify-content: left; } }
   @media (max-width: 767.98px) {
     .items-finity-info {
-      margin-left: 17px; } }
+      padding-left: 32px;
+      gap: 32px; } }
   .items-finity-info__item {
     flex: 0 0 480px;
     border-radius: 57px;
@@ -2520,9 +2526,6 @@ svg path {
     .items-finity-info__item_m {
       background: linear-gradient(148.71deg, #b2ff0f 10.47%, #76ffef 88.29%);
       box-shadow: 2px 2px 9px 0px #169d00; }
-    @media (max-width: 1550px) {
-      .items-finity-info__item:last-child {
-        margin-right: 15px; } }
     @media (max-width: 1024px) {
       .items-finity-info__item {
         flex: 0 0 400px; } }
@@ -3176,6 +3179,9 @@ svg path {
   padding-bottom: 116px;
   order: 10;
   position: relative; }
+  @media (max-width: 1024px) {
+    .token-address {
+      display: none; } }
   .token-address__body {
     display: flex;
     flex-direction: column;
@@ -3214,8 +3220,7 @@ svg path {
     gap: 35px;
     padding: 10px 10px 10px 31px;
     border: 2px solid white;
-    border-radius: 44px;
-    flex-direction: column; }
+    border-radius: 44px; }
   .copy-token-address__copy-text {
     font-family: Montserrat;
     font-size: 20px;
